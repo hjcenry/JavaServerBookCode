@@ -1,0 +1,5 @@
+mongo集群配置：http://www.lanceyan.com/tech/mongodb/mongodb_cluster_1.html
+mongo java api：http://api.mongodb.org/java/3.1/
+mongo 高级查询示例：
+		http://blog.csdn.net/maosijunzi/article/details/42100535
+		http://blog.csdn.net/tujiyue/article/details/6437821

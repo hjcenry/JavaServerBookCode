@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping SYSTEM "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<!-- 一个class标签对应一个实体类，name属性指定实体类名称，table属性指定关联的数据库表 -->
+	<class name="com.hjc.demo.DemoBean" table="t_demo1">
+		<!-- 主键 -->
+		<id name="id" column="id">
+			<!-- 主键的生成策略 -->
+			<generator class="native"></generator>
+		</id>
+		<!-- 其他属性，name对应实体类的属性，column对应关系型数据库表的列 -->
+		<property name="name" column="name"></property>
+		<property name="sex" column="sex"></property>
+		<property name="createtime" column="createtime"></property>
+	</class>
+</hibernate-mapping>

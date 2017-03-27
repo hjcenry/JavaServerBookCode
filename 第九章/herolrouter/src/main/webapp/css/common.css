@@ -1,0 +1,174 @@
+﻿﻿@charset "utf-8";
+*{margin:0px;padding:0px;}
+
+
+i, em, cite {
+	font-style:normal;
+}
+table {
+	width:100%;
+	/*table-layout:fixed;*/
+	border-collapse:collapse;
+}
+table td {padding:0 5px;
+}
+table th {padding:0 5px;
+}
+.odd {
+}
+.even {
+}
+a {
+	color:#2b64b1;
+	text-decoration: none;
+}
+a:hover {
+	color: #0168CA;
+	text-decoration: underline;
+}
+.tableLayoutFixed {
+	table-layout:fixed
+}
+.tableLayoutFixed td {
+	word-wrap:break-word;
+	word-break:break-all;
+}
+*:focus {
+	outline: none;
+}
+textarea, input, button, img {
+	line-height: normal;
+	margin:0;
+}
+img, button{
+	border:none;
+}
+input, select, label, button {
+	vertical-align:middle
+}
+input, textarea, select {
+	font-size:12px;
+	color:#666;
+}
+li {
+	list-style-type: none;
+}
+.btnStyle1 { background:#f8f8f8; border:1px solid #d9d9d9 ; padding:0 8px; font-weight:bold; color:#666; height:35px; line-height:35px;}
+.btnStyle2 { background:#f8f8f8; border:1px solid #d9d9d9 ; padding:0 8px; font-weight:bold; color:#666; height:25px; line-height:25px;}
+.clear {
+	clear:both;
+	font-size:0;
+	line-height:0;
+}
+.hide {
+	display:none;
+}
+.fl {
+	float:left;
+}
+.fr {
+	float:right;
+}
+.absolute {
+	position:absolute
+}
+.relative {
+	position:relative
+}
+.pointer {
+	cursor:pointer
+}
+.cut { margin:10px;}
+input, button, select, textarea {
+	outline:none;
+}
+textarea {
+	resize:none;
+}
+.clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	line-height:0;
+	font-size:0;
+	clear:both;
+	visibility:hidden;
+}
+.red { color:#C00}
+.clearfix {
+	zoom:1;
+}
+.center {
+	text-align:center;
+}
+
+.brTop { border-top:1px  solid #c2c1c6}
+/*头部*/
+.header .top1 .logo1{width:298px;height:36px; background:url(../images/logo1.png) 0 8px no-repeat;margin:0px 0 0 10px;overflow:hidden;float:left;}
+.header .top1 .rightcon{width:300px;float:right;margin-right:6px;}
+.header .top1 .rightcon li{display:inline-block;float:right;margin:6px 15px;cursor:pointer;}
+.header .top2 .logo2{width:192px;height:60px;margin-left:30px;float:left; background:url(../images/logo2.png)}
+.header .top2 .rightcon{width:765px;height:60px;float:right;}
+.header .user{padding:5px 0 0 0;display:inline-block;vertical-align:middle;float:right; }
+.header .user .img1{width:48px;height:48px;border:1px solid #ccc;vertical-align:middle;margin:0 10px 0 10px; }
+.header .user .username{vertical-align:middle;display:inline-block;}
+.header .user .drop-down{width:21px;height:18px;vertical-align:middle;display:inline-block;background:url(../images/arrow-01.png) 0 0px no-repeat;margin:0 5px 0 0;cursor:pointer;}
+.header .menu{display:inline-block;float:right;vertical-align:middle;}
+.header .menu li{height:60px;display:inline-block;background:url(../images/menu.png) 0 0 no-repeat;cursor:pointer;margin:0px;padding:0px;float:Left;}
+.header li.menu_1{width:90px;background-position:0 0;}
+.header li.menu_1:hover{width:90px;background-position:0 -60px;}
+.header li.menu_1.hover{width:90px;background-position:0 -60px;}
+.header li.menu_2{width:92px;background-position:-90px 0;}
+.header li.menu_2:hover{width:92px;background-position:-90px -60px;}
+.header li.menu_2.hover{width:92px;background-position:-90px -60px;}
+.header li.menu_3{width:89px;background-position:-182px 0;}
+.header li.menu_3:hover{width:89px;background-position:-182px -60px;}
+.header li.menu_3.hover{width:89px;background-position:-182px -60px;}
+.header li.menu_4{width:88px;background-position:-271px 0;}
+.header li.menu_4:hover{width:88px;background-position:-271px -60px;}
+.header li.menu_4.hover{width:88px;background-position:-271px -60px;}
+.header li.menu_5{width:90px;background-position:-359px 0;}
+.header li.menu_5:hover{width:90px;background-position:-359px -60px;}
+.header li.menu_5.hover{width:90px;background-position:-359px -60px;}
+.header li.menu_6{width:90px;background-position:-449px 0;}
+.header li.menu_6:hover{width:90px;background-position:-449px -60px;}
+.header li.menu_6.hover{width:90px;background-position:-449px -60px;}
+.header li.menu_7{width:90px;background-position:-539px 0;}
+.header li.menu_7:hover{width:90px;background-position:-539px -60px;}
+.header li.menu_7.hover{width:90px;background-position:-539px -60px;}
+
+.leftcon{width:200px;height:800px;background:url(../images/left-bg.png) repeat-y;}
+.leftcon .leftmenu{width:200px;overflow:hidden;}
+.leftcon .leftmenu li{min-height:55px;padding:10px 15px 10px 20px;color:#5f6671; background:url(../images/left-bg1.png) bottom repeat-x;cursor:pointer;}
+.leftcon .leftmenu li img{float:left;margin:0 10px 0 0;}
+.leftcon .leftmenu li .txt{width:106px;float:left;display:block;}
+.leftcon .leftmenu li.current{color:#fff; background:#7d838f url(../images/left-bg2.png)bottom repeat-x;}
+.leftcon .leftmenu li:hover{color:#fff; background:#7d838f url(../images/left-bg2.png)bottom repeat-x;}
+.leftcon .addicon{width:200px; text-align:center;margin:20px 0 0 0;}
+
+
+.rcon{width:1060px;}
+.btn01{width:108px;height:35px; background:url(../images/btn1-bg.png) no-repeat; color:#fff;border:0px;cursor:pointer;font-size:16px;}
+.btngrey{width:108px;height:35px; background:url(../images/btn_grey.gif) no-repeat; color:#000;border:0px;cursor:pointer;font-size:16px;}
+.btns03{width:86px;height:30px; background:url(../images/btnO2Bg.gif) no-repeat; color:#fff;border:0px;cursor:pointer;font-size:14px;}
+.btns01:hover{ background-position: 0 -35px;}
+.btns01:active{ background-position: 0 -70px;}
+.ipt01{height:28px;border:1px solid #ddd;padding:0 0 0 5px }
+.sel01{height:28px;line-height:30px;}
+.pages01{height:40px;line-height:40px;}
+.pages01 .lcon{display:inline-block;float:left;}
+.pages01 .rcon{width:220px;float:right; text-align:right;}
+.pages01 .rcon span{flot:right; vertical-align:middle;}
+.pages01 .btns{display:inline-block;width:17px;height:17px; background:url(../images/page-icons.png) no-repeat;cursor:pointer;margin:0 3px; }
+.pages01 .pre-no{ background-position:0 -17px;}
+.pages01 .pre-yes{ background-position:0 0;}
+.pages01 .next-no{ background-position:0 -51px;}
+.pages01 .next-yes{ background-position:0 -34px;}
+.pages01 .all{margin-right:5px;}
+.blue{color:#0f95f6;}
+.blue2{color:#3a6587;}
+.btn03{width:86px;height:30px; background:url(../images/btnO2Bg.gif) no-repeat; color:#fff;border:0px;cursor:pointer;font-size:14px;} 
+
+
+.textarea02 { background:url(../images/textareaBg.gif) no-repeat; border:none; width:585px; height:145px;}
+.textarea02 :active{border:none;}

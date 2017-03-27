@@ -1,0 +1,17 @@
+/* 提示页面 */
+.tips {
+	padding: 0 20px;
+	height: 35px;
+	background-color: #000;
+	margin: 0 auto;
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+	line-height: 35px;
+	font-size: 1.6rem;
+	text-align: center;
+	color: #fff;
+	-moz-border-radius: 0.5rem;
+	-webkit-border-radius: 0.5rem;
+	border-radius: 0.5rem;
+	font-size:1.1rem;
+}

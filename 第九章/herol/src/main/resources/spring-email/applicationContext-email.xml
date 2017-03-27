@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans       
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 邮件发送者 -->
+	<bean id="sender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.sina.com" />
+		<property name="username" value="baizhi_bj" />
+		<property name="password" value="baizhi" />
+		<property name="javaMailProperties">
+			<props>
+				<!-- 如果要使用用户名和密码验证,这一步需要 -->
+				<prop key="mail.smtp.auth">true</prop>
+			</props>
+		</property>
+	</bean>
+</beans>   

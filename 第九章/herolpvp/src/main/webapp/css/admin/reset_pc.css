@@ -1,0 +1,150 @@
+/**
+ * By lingling
+ * date 2014.01.01
+ * reset v1.0
+ * PC端适配首页样式
+ */
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+html{
+	color:#000;background:#fff;
+	-webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+/* 内外边距通常让各个浏览器样式的表现位置不同 */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	margin:0;padding:0;
+}
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+/* HTML5 媒体文件跟 img 保持一致 */
+audio,canvas,video {
+    display: inline-block;*display: inline;*zoom: 1;
+}
+/* 要注意表单元素并不继承父级 font 的问题 */
+body,button,input,select,textarea{
+	font:12px/1.5  "Microsoft YaHei",Tahoma,HelveticaRegular,Helvetica,Verdana,Lucida,Arial,sans-serif,\5b8b\4f53;
+}
+input,select,textarea{
+	font-size:100%;
+}
+/* 去掉各Table  cell 的边距并让其边重合 */
+table{
+	border-collapse:collapse;border-spacing:0;
+}
+/* IE bug fixed: th 不继承 text-align*/
+th{
+	text-align:inherit;
+}
+/* 去除默认边框 */
+fieldset,img{
+	border:0;
+}
+/* ie6 7 8(q) bug 显示为行内表现 */
+iframe{
+	display:block;
+}
+/* 去掉 firefox 下此元素的边框 */
+abbr,acronym{
+	border:0;font-variant:normal;
+}
+/* 一致的 del 样式 */
+del {
+	text-decoration:line-through;
+}
+img, a img { 
+    border: 0 none; 
+    color: rgb(255, 255, 255); 
+    vertical-align: middle; 
+} 
+address, caption, cite, code, dfn, em, strong, th, var, i { 
+    font-style: normal; 
+    font-weight: normal; 
+}
+/* 去掉列表前的标识, li 会继承 */
+ol,ul { 
+    list-style: none outside none; 
+    vertical-align:top; 
+} 
+caption, th { 
+    text-align: left; 
+} 
+h1, h2, h3, h4, h5, h6 { 
+    font-size: 100%; 
+    font-weight: normal; 
+} 
+abbr, acronym { 
+    border: 0 none; 
+    font-variant: normal; 
+} 
+/* 统一上标和下标 */
+sub, sup {
+    font-size: 75%; line-height: 0; position: relative; vertical-align: baseline;
+}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+textarea { 
+    resize: vertical; 
+} 
+input, button, textarea, select { 
+    font-family: inherit; 
+    font-size: inherit; 
+    font-weight: inherit; 
+} 
+select { 
+    white-space: nowrap; 
+    padding:3px; 
+} 
+input{ 
+    border:1px solid #b0b0b0; 
+    padding:3px; 
+    color:#979797; 
+} 
+input[type="text"], input[type="password"], textarea { 
+    border: 1px solid rgb(204, 204, 204); 
+} 
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus { 
+    border: 1px solid rgb(153, 153, 153); 
+} 
+input[type="submit"], input[type="button"], input[type="checkbox"], input[type="radio"], label { 
+    cursor: pointer; 
+}
+/* 让链接在 hover 状态下显示下划线 */
+a:hover {
+	text-decoration:underline;
+}
+
+/* 默认不显示下划线，保持页面简洁 */
+ins,a {
+	text-decoration:none;
+}
+a:visited { 
+    text-decoration: none; 
+} 
+a:active { 
+    /*链接颜色可变*/ 
+    color: #8b8b8b; 
+} 
+b,strong { 
+    font-weight: bold; 
+}    
+.clearfix:before, .clearfix:after { 
+    content: "."; 
+    display: block; 
+    font-size: 0; 
+    width: 0; 
+    height: 0; 
+    line-height: 0; 
+    overflow: hidden; 
+    visibility: hidden; 
+} 
+.clearfix:after { 
+    clear: both;
+} 
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+* { 
+    word-break: break-all; 
+    word-wrap: break-word; 
+}

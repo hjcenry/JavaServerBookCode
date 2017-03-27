@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>WebSocket客户端</title>
+ </head>
+<body>
+	<div>
+		<input id="msg" type="text" value="" /> <input type="submit"
+			value="发送" onclick="sendMsg()" />
+	</div>
+	<div id="messages"></div>
+	<script type="text/javascript">
+		// websocket协议访问以ws开头
+		var webSocket = new WebSocket('ws://localhost:8080/demo/websocket');
+		// websocket连接失败回调函数 
+		webSocket.onerror = function(event) {
+			console.log("error:", event.data);
+		};
+		// websocket打开连接回调函数
+		webSocket.onopen = function(event) {
+			console.log("连接服务器成功");
+		};
+		// websocket接收到消息回调函数 
+		webSocket.onmessage = function(event) {
+			console.log("客户端接收消息:", event.data);
+		};
+		function sendMsg() {
+			var msg = document.getElementById("msg");
+			console.log("发送自客户端的消息:" + msg)
+			webSocket.send("发送自客户端的消息:" + msg);
+		}
+	</script>
+</body>
+</html>

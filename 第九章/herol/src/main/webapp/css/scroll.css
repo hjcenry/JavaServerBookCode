@@ -1,0 +1,20 @@
+::-webkit-scrollbar {
+  		width: 1.2%;
+}
+
+/* 滚动槽*/
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+    border-radius: 10px;
+    filter:alpha(opacity=80);  
+    
+} 
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.1);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+    	

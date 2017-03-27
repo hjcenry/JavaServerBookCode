@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+     http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+     http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc.xsd
+     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+	<!-- 定义加载资源文件 -->
+	<!-- <context:property-placeholder location="classpath:application.properties" 
+		ignore-unresolvable="true" /> -->
+	<context:property-placeholder location="classpath:datasource.properties"
+		ignore-unresolvable="true" />
+
+	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName" value="${jdbc.driverClassName}"/> <property 
+		name="url" value="${jdbc.url}"/> </bean> -->
+	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
+		init-method="init" destroy-method="close">
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.user}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="maxActive" value="${jdbc.maxActive}" />
+		<property name="initialSize" value="${jdbc.initialSize}" />
+		<!--过滤 -->
+		<property name="filters" value="config,wall" />
+		<!--密码加密 -->
+		<!-- property name="connectionProperties" value="config.decrypt=true" / -->
+		<!--合并多个数据源 -->
+		<property name="useGloalDataSourceStat" value="true" />
+		<property name="proxyFilters">
+			<list>
+				<ref bean="log-filter" />
+				<ref bean="stat-filter" />
+			</list>
+		</property>
+	</bean>
+	<bean id="log-filter" class="com.alibaba.druid.filter.logging.Log4jFilter">
+		<property name="statementLogErrorEnabled" value="true" />
+	</bean>
+	<bean id="stat-filter" class="com.alibaba.druid.filter.stat.StatFilter">
+		<property name="slowSqlMillis" value="1000" />
+		<property name="logSlowSql" value="true" />
+	</bean>
+	<!-- transaction manager, use JtaTransactionManager for global tx -->
+	<!-- <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> 
+		<property name="dataSource" ref="dataSource" /> </bean> -->
+	<!-- enable component scanning (beware that this does not enable mapper 
+		scanning!) -->
+	<context:component-scan base-package="com.hjc.herol" />
+	<!-- enable autowire -->
+	<context:annotation-config />
+	<!-- enable transaction demarcation with annotations -->
+	<tx:annotation-driven />
+	<!-- 定义事务管理 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<!-- 事务执行方式 REQUIRED：指定当前方法必需在事务环境中运行， 如果当前有事务环境就加入当前正在执行的事务环境， 如果当前没有事务，就新建一个事务。 
+				这是默认值。 -->
+			<tx:method name="create*" propagation="REQUIRED" />
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="remove*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="import*" propagation="REQUIRED" />
+			<!-- 指定当前方法以非事务方式执行操作，如果当前存在事务，就把当前事务挂起，等我以非事务的状态运行完，再继续原来的事务。 查询定义即可 
+				read-only="true" 表示只读 -->
+			<tx:method name="*" propagation="NOT_SUPPORTED" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+	<!-- 定义 Autowired 自动注入 bean -->
+	<bean
+		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
+	<!-- define the SqlSessionFactory <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"> 
+		<property name="configLocation" value="classpath:MyBatisConfiguration.xml" 
+		/> <property name="dataSource" ref="dataSource" /> <property name="mapperLocations" 
+		value="classpath:com/hjczb/warouter/**/*Mapper.xml" /> <property name="typeAliasesPackage" 
+		value="com.hjczb.warouter" /> </bean> -->
+	<!-- MyBatisScanner <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"> 
+		<property name="basePackage" value="com.hjczb.warouter" /> <property name="annotationClass" 
+		value="com.hjczb.warouter.util.mapper.MyBatisRepository" /> </bean> -->
+	<!-- 线程池 -->
+	<bean id="taskExecutor"
+		class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+		<!-- 核心线程数 -->
+		<property name="corePoolSize" value="10" />
+		<!-- 最大线程数 -->
+		<property name="maxPoolSize" value="30" />
+		<!-- 队列最大长度 >=mainExecutor.maxSize -->
+		<property name="queueCapacity" value="1000" />
+		<!-- 线程池维护线程所允许的空闲时间 -->
+		<property name="keepAliveSeconds" value="300" />
+		<!-- 线程池对拒绝任务(无线程可用)的处理策略 -->
+		<property name="rejectedExecutionHandler">
+			<bean class="java.util.concurrent.ThreadPoolExecutor$CallerRunsPolicy" />
+		</property>
+	</bean>
+	<!-- hibernate SessionFactory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<!-- 数据源 -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- hibernate的相关属性配置 -->
+		<property name="hibernateProperties">
+			<value>
+				<!-- 设置数据库方言 -->
+				hibernate.dialect=org.hibernate.dialect.MySQLDialect
+				<!-- 设置自动创建|更新|验证数据库表结构 -->
+				hibernate.hbm2ddl.auto=update
+				<!-- 是否在控制台显示sql -->
+				hibernate.show_sql=false
+				<!-- 是否格式化sql，优化显示 -->
+				hibernate.format_sql=false
+				<!-- 是否开启二级缓存 -->
+				hibernate.cache.use_second_level_cache=false
+				<!-- 是否开启查询缓存 -->
+				hibernate.cache.use_query_cache=false
+				<!-- 数据库批量查询最大数 -->
+				hibernate.jdbc.fetch_size=50
+				<!-- 数据库批量更新、添加、删除操作最大数 -->
+				hibernate.jdbc.batch_size=50
+				<!-- 是否自动提交事务 -->
+				hibernate.connection.autocommit=true
+				<!-- 指定hibernate在何时释放JDBC连接 -->
+				hibernate.connection.release_mode=auto
+				<!-- 创建session方式 hibernate4.x 的方式 -->
+				hibernate.current_session_context_class=thread
+				<!-- javax.persistence.validation.mode默认情况下是auto的，就是说如果不设置的话它是会自动去你的classpath下面找一个bean-validation**包 
+					所以把它设置为none即可 -->
+				javax.persistence.validation.mode=none
+			</value>
+		</property>
+		<!-- 自动扫描实体对象 tdxy.bean的包结构中存放实体类 -->
+		<property name="packagesToScan" value="com.hjc.herol" />
+	</bean>
+</beans>

@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+ul,li{margin:0; padding:0; list-style:none}
+h1,h2,h3,h4,h5,h6{margin:0; padding:0; font-family:"微软雅黑"}
+a:hover, a:visited, a:active{text-decoration:none}
+
+.fl{float:left}
+.fr{float:right}
+.clear{clear:both}
+
+/*回到头部*/
+.back-top{width:40px; height:40px;position:fixed; bottom:200px; right:0; z-index:1001; border:1px solid #ddd; background:#f9f9f9; text-align:center; font-size:20px; color:#999; padding:5px 0; cursor:pointer}
+.back-top:hover{border:1px solid #9BC9E4; color:#0085D0; background:#9BC9E4}
+
+/*layout*/
+ul.owner{content:""; display:table; padding-right:7px}
+ul.owner li{float:left; padding:17px 0 17px 10px; position:relative}
+ul.owner li span{color:#999; }
+ul.owner li span.ico{width:15px; height:15px; display:block; background:url(../images/ico_header.png) no-repeat; margin:3px 0; cursor:pointer}
+ul.owner li.msg span.ico{background-position:0 -5px}
+ul.owner li.msg:hover span.ico{background-position:0 -33px;}
+ul.owner li.setting span.ico{background-position:-30px -5px}
+ul.owner li.setting .dropdown{position:absolute; top:48px; right:-5px; width:120px; border:1px solid #ccc; background:#fff; box-shadow:0 0 1px #ccc; padding:3px 4px 4px 4px; display:none;z-index:999;}
+ul.owner li.setting .dropdown .top-arrow{position:absolute; width:12px; height:13px; display:block; top:-13px; right:5px; background:url(../images/dropdown-arrow.png) no-repeat}
+ul.owner li.setting .dropdown .item{line-height:30px; padding:0 10px; overflow:hidden; margin-top:1px; cursor:pointer}
+ul.owner li.setting .dropdown .item span{float:left; height:30px; margin:0 5px 0 0; font-size:12px}
+ul.owner li.setting .dropdown .item span.ico-password{background-position:0px -86px}
+ul.owner li.setting .dropdown .item span.ico-quit{background-position:0px -123px}
+ul.owner li.setting .dropdown .item:hover span.ico-password, ul.owner li.setting .dropdown .current span.ico-password{background-position:-30px -86px}
+ul.owner li.setting .dropdown .item:hover span.ico-quit, ul.owner li.setting .dropdown .current span.ico-quit{background-position:-30px -123px}
+ul.owner li.setting .dropdown .current, ul.owner li.setting .dropdown .item:hover{background:#0085D0;}
+ul.owner li.setting .dropdown .current span, ul.owner li.setting .dropdown .item:hover span{ color:#fff}
+ul.owner li.setting:hover span.ico{background-position:-30px -33px;}
+ul.owner li.setting:hover .dropdown{display:block;}
+
+
+.container{padding:0; position:relative; content:""; display:table; min-width:1000px}
+.right-content{margin-left:190px; min-width:830px;min-height:500px; border-left:1px solid #eee; content:""; display:block;}
+footer{text-align:center; font-size:11px; color:#999; margin:20px 0; line-height:18px}
+
+/*public: 侧边菜单*/
+sidebar{width:190px;content:""; display:table; position:absolute; left:0; top:0}
+sidebar .line{height:1px; border-bottom:1px solid #eee; overflow:hidden}
+sidebar .item{}
+sidebar .item h2{background:url(../images/menu_item_bg.jpg) repeat-x}
+sidebar .item h2 a{font-size:14px; height:20px; line-height:20px;display: block; padding: 10px 15px; color:#333; font-weight:bold}
+sidebar .item h2 a:hover{color:#0080CC}
+sidebar .item h2.active{background-color:}
+sidebar .item h2 a span{float:left}
+sidebar .item h2 a span.ico{width:18px; height:20px; margin-right:5px; display:inline-block; background:url(../images/menu_ico.png) no-repeat}
+sidebar .item h2 a span.ico-account-monitor{background-position:0 0}
+sidebar .item h2 a span.ico-data-analysis{background-position:0 -33px}
+sidebar .item h2 a span.ico-data-search{background-position:0 -71px}
+sidebar .item h2 a span.ico-system-manage{background-position:0 -110px}
+sidebar .item h2 a span.ico-public-opinion{background-position:0 -144px}
+sidebar .item h2 a span.ico-service-analysis{background-position:0 -181px}
+sidebar .item h2 a:hover span.ico-account-monitor, sidebar .current h2 a span.ico-account-monitor{background-position:-29px 0}
+sidebar .item h2 a:hover span.ico-data-analysis, sidebar .current h2 a span.ico-data-analysis{background-position:-29px -33px}
+sidebar .item h2 a:hover span.ico-data-search, sidebar .current h2 a span.ico-data-search{background-position:-29px -71px}
+sidebar .item h2 a:hover span.ico-system-manage, sidebar .current h2 a span.ico-system-manage{background-position:-29px -110px }
+sidebar .item h2 a:hover span.ico-public-opinion, sidebar .current h2 a span.ico-public-opinion{background-position:-29px -144px }
+sidebar .item h2 a:hover span.ico-service-analysis, sidebar .current h2 a span.ico-service-analysis{background-position:-29px -181px }
+
+sidebar .item ul.nav{padding:10px; background:#f9f9f9}
+sidebar .item ul.nav a{border-radius:0}
+sidebar .item ul.nav a span{padding-left:8px}
+sidebar .item ul.nav li a{line-height:20px; color:#333}
+sidebar .item ul.nav li.active a{color:#fff}
+sidebar .item ul.nav li.line{border-bottom:1px dotted #ddd}
+sidebar .current h2 a{color:#0080CC}

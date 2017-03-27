@@ -1,0 +1,20 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!--配置mysql数据库的连接参数 -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- 驱动程序名 -->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- 数据库名称 -->
+		<property name="hibernate.connection.url">jdbc:mysql://127.0.0.1:3306/demo</property>
+		<!-- 用户名 -->
+		<property name="hibernate.connection.username">root</property>
+		<!-- 密码 -->
+		<property name="hibernate.connection.password">123456</property>
+		<!-- 添加DemoBean.hbm.xml映射文件 -->
+        <mapping resource="com/hjc/demo/hibernate/DemoBean.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>

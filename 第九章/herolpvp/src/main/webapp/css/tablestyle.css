@@ -1,0 +1,25 @@
+
+/* Table 1 Style */
+table{
+	font-size:14px;
+}
+table td{
+	padding:5px;
+	margin:5px;
+}
+input{
+	height:30px;
+}
+.btn
+{
+	border: none;
+	background-color: #615c8d;
+	color: #fff;
+	border-radius: 4px;
+	padding: 1px 8px;
+	font-size: 14px;
+	text-align: center;
+	margin:10px;
+	width:100px;
+	height:30px;
+}

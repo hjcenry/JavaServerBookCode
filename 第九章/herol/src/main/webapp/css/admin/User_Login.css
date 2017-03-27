@@ -1,0 +1,207 @@
+#userlogin_body {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(../../images/admin/user_all_bg.gif) #226cc5 repeat-x 50% top; PADDING-BOTTOM: 0px; MARGIN: 110px 0px 0px; FONT: 12px/150% Arial, "����" ,Helvetica,sans-serif; PADDING-TOP: 0px; TEXT-DECORATION: none
+}
+#user_login {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_top {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_main {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_bottom {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_login DL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_login DD {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_top {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_main {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_bottom {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_top UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_main UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_bottom UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_top LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_main LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_bottom LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+#user_login {
+	MARGIN: 0px auto; WIDTH: 590px
+}
+#user_top {
+	CLEAR: both
+}
+#user_main {
+	CLEAR: both
+}
+#user_bottom {
+	CLEAR: both
+}
+#user_top LI {
+	FLOAT: left; LIST-STYLE-TYPE: none
+}
+#user_main LI {
+	FLOAT: left; LIST-STYLE-TYPE: none
+}
+#user_bottom LI {
+	FLOAT: left; LIST-STYLE-TYPE: none
+}
+.user_top_r {
+	BACKGROUND: url(../../images/admin/user_top_r.gif) no-repeat 50% top
+}
+.user_top_c {
+	BACKGROUND: url(../../images/admin/user_top_c.gif) no-repeat 50% top
+}
+.user_top_l {
+	BACKGROUND: url(../../images/admin/user_top_l.gif) no-repeat 50% top
+}
+.user_main_r {
+	BACKGROUND: url(../../images/admin/user_main_r.gif) #bec5cc no-repeat 50% top
+}
+.user_main_c {
+	BACKGROUND: url(../../images/admin/user_main_c.gif) #bec5cc no-repeat 50% top; WIDTH: 280px
+}
+.user_main_l {
+	BACKGROUND: url(../../images/admin/user_main_l.gif) #bec5cc no-repeat 50% top
+}
+.user_bottom_r {
+	BACKGROUND: url(../../images/admin/user_bottom_r.gif) no-repeat 50% top
+}
+.user_bottom_c {
+	BACKGROUND: url(../../images/admin/user_bottom_c.gif) no-repeat 50% top; COLOR: #fff; LINE-HEIGHT: 117px; PADDING-TOP: 20px; TEXT-ALIGN: right
+}
+.user_bottom_c A {
+	COLOR: yellow; TEXT-DECORATION: underline
+}
+.user_bottom_c A:hover {
+	COLOR: #c00
+}
+.user_bottom_l {
+	BACKGROUND: url(../../images/admin/user_bottom_l.gif) no-repeat 50% top
+}
+.user_top_r {
+	FLOAT: left; WIDTH: 180px
+}
+.user_main_r {
+	FLOAT: left; WIDTH: 180px
+}
+.user_bottom_r {
+	FLOAT: left; WIDTH: 180px
+}
+user_main_c {
+	FLOAT: left; WIDTH: 280px
+}
+.user_top_c {
+	FLOAT: left; WIDTH: 280px
+}
+.user_bottom_c {
+	FLOAT: left; WIDTH: 280px
+}
+.user_top_l {
+	FLOAT: left; WIDTH: 129px
+}
+.user_main_l {
+	FLOAT: left; WIDTH: 129px
+}
+.user_bottom_l {
+	FLOAT: left; WIDTH: 129px
+}
+.user_top_r {
+	HEIGHT: 116px
+}
+.user_top_c {
+	HEIGHT: 116px
+}
+.user_top_l {
+	HEIGHT: 116px
+}
+.user_main_r {
+	HEIGHT: 139px
+}
+.user_main_c {
+	HEIGHT: 139px
+}
+.user_main_l {
+	HEIGHT: 139px
+}
+.user_main_r {
+	LINE-HEIGHT: 139px
+}
+.user_bottom_r {
+	HEIGHT: 117px
+}
+.user_bottom_c {
+	HEIGHT: 117px
+}
+.user_bottom_l {
+	HEIGHT: 117px
+}
+.user_main_box {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.user_main_box UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.user_main_box LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+.user_main_box UL {
+	CLEAR: both
+}
+.user_main_box LI {
+	FLOAT: left; LIST-STYLE-TYPE: none
+}
+.user_main_box .user_main_text {
+	LINE-HEIGHT: 34px; HEIGHT: 34px
+}
+.user_main_box .user_main_input {
+	LINE-HEIGHT: 34px; HEIGHT: 34px
+}
+.user_main_box .user_main_text {
+	WIDTH: 60px; COLOR: #000
+}
+.user_main_box .user_main_input IMG {
+	MARGIN-BOTTOM: -2px; MARGIN-LEFT: -25px
+}
+.TxtUserNameCssClass {
+	BORDER-TOP-WIDTH: 0px; PADDING-LEFT: 25px; BORDER-LEFT-WIDTH: 0px; BACKGROUND: url(../../images/admin/user_login_name.gif) no-repeat; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 165px; LINE-HEIGHT: 20px; HEIGHT: 21px; BORDER-RIGHT-WIDTH: 0px
+}
+.TxtPasswordCssClass {
+	BORDER-TOP-WIDTH: 0px; PADDING-LEFT: 25px; BORDER-LEFT-WIDTH: 0px; BACKGROUND: url(../../images/admin/user_login_password.gif) no-repeat; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 165px; LINE-HEIGHT: 20px; HEIGHT: 21px; BORDER-RIGHT-WIDTH: 0px
+}
+.TxtValidateCodeCssClass {
+	BORDER-TOP-WIDTH: 0px; PADDING-LEFT: 25px; BORDER-LEFT-WIDTH: 0px; BACKGROUND: url(../../images/admin/user_login_validatecode.gif) no-repeat; IME-MODE: disabled; BORDER-BOTTOM-WIDTH: 0px; WIDTH: 91px; LINE-HEIGHT: 20px; HEIGHT: 21px; BORDER-RIGHT-WIDTH: 0px
+}
+.IbtnEnterCssClass {
+	WIDTH: 111px; HEIGHT: 122px
+}
+
+//单选框
+.order{margin:10px auto;}
+.order input[type="checkbox"],.order input[type="radio"]{display:none;}
+.order input[type="checkbox"] + label span,.order input[type="radio"] + label span{display:inline-block; width:17px;height:17px; margin-right:5px;vertical-align:middle;background:url(../../images/checkbox.jpg) 0 -17px no-repeat;background-size:17px;cursor:pointer;}
+.order input[type="checkbox"]:checked + label span,.order input[type="radio"]:checked + label span{ background:url(../../images/checkbox.jpg) 0 0 no-repeat;background-size:17px;}

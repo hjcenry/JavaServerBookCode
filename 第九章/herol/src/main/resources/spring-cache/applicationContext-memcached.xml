@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context.xsd 
+		http://www.springframework.org/schema/cache 
+		http://www.springframework.org/schema/cache/spring-cache.xsd">
+
+
+
+
+	<!-- 定义加载资源文件 -->
+	<context:property-placeholder
+		location="classpath:spring-cache/memcached.properties"
+		ignore-unresolvable="true" />
+
+	<!-- 配置memcached的客户端 -->
+	<bean id="memcachedClient" class="net.spy.memcached.spring.MemcachedClientFactoryBean">
+		<property name="servers" value="${servers}" />
+		<property name="protocol" value="${protocol}" />
+		<property name="transcoder">
+			<bean class="net.spy.memcached.transcoders.SerializingTranscoder">
+				<property name="compressionThreshold" value="${compressionThreshold}" />
+			</bean>
+		</property>
+		<property name="opTimeout" value="${opTimeout}" />
+		<property name="timeoutExceptionThreshold" value="${timeoutExceptionThreshold}" />
+		<property name="hashAlg" value="${hashAlg}" />
+		<property name="locatorType" value="${locatorType}" />
+		<property name="failureMode" value="${failureMode}" />
+		<property name="useNagleAlgorithm" value="${useNagleAlgorithm}" />
+	</bean>
+
+
+
+</beans>
